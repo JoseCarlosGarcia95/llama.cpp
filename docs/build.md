@@ -3,7 +3,7 @@
 **To get the Code:**
 
 ```bash
-git clone https://github.com/ggerganov/llama.cpp
+git clone https://github.com/ggml-org/llama.cpp
 cd llama.cpp
 ```
 
@@ -203,6 +203,14 @@ This provides GPU acceleration using the MUSA cores of your Moore Threads MTT GP
 
   ```bash
   cmake -B build -DGGML_MUSA=ON
+  cmake --build build --config Release
+  ```
+
+  For static build:
+
+  ```bash
+  cmake -B build -DGGML_MUSA=ON \
+    -DBUILD_SHARED_LIBS=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON
   cmake --build build --config Release
   ```
 
